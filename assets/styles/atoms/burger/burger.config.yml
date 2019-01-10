@@ -1,0 +1,14 @@
+title: "Burger"
+status: "ready"
+
+context:
+  burger:
+    message: Menu
+
+variants:
+  -
+    name: active
+    context:
+      burger:
+        message: Close
+        modifier: is--active

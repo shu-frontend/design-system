@@ -1,0 +1,38 @@
+// ==========================================================================
+// Inverse Tool
+//
+// Used to *invert* the colours of a element, essentially blanket covers all children in an element with white colouring
+// ==========================================================================
+
+@mixin inverse() {
+    // Generic recolour of elements within inversed area
+    color: white;
+
+    // Recolour all heading tags
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
+        color: white;
+    }
+
+    a, .link {
+        // Recolour all anchors and anchor hovers
+        @include link() {
+            color: white;
+        }
+
+        @include link-hover() {
+            color: tint(white, 'darken');
+        }
+    }
+
+    li {
+        // Recolour li bullets point pseudo elements
+        &:before {
+            background-color: white !important; // sass-lint:disable-line no-important
+        }
+    }
+}

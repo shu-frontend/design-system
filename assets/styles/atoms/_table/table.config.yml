@@ -1,0 +1,32 @@
+title: "Table"
+status: "ready"
+
+context:
+  table:
+    header: This is an example of a table header
+    footer: This is an example of a table footer
+    rows:
+      -
+        col1: Column 1 Row 1
+        col2: Column 2 Row 1
+        col3: Column 3 Row 1
+      -
+        col1: Column 1 Row 2
+        col2: Column 2 Row 2
+        col3: Column 3 Row 2
+      -
+        col1: Column 1 Row 3
+        col2: Column 2 Row 3
+        col3: Column 3 Row 3
+      -
+        col1: Column 1 Row 4
+        col2: Column 2 Row 4
+        col3: Column 3 Row 4
+      -
+        col1: Column 1 Row 5
+        col2: Column 2 Row 5
+        col3: Column 3 Row 5
+      -
+        col1: Column 1 Row 6
+        col2: Column 2 Row 6
+        col3: Column 3 Row 6

@@ -1,0 +1,13 @@
+// ==========================================================================
+// Trim Utility
+//
+// Used to trim a specific child element of an element - docco in `tools/trim`
+// ==========================================================================
+
+.u-trim {
+    @include trim;
+}
+
+.u-trim-pad {
+    @include trim-pad;
+}

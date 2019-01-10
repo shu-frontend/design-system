@@ -1,0 +1,107 @@
+// ==========================================================================
+// Button Atom
+// ==========================================================================
+
+
+@mixin btn() {
+    display: inline-block;
+    text-align: center;
+    border-radius: rem-calc(3);
+    padding: spacing(14 16);
+    font-weight: 500;
+    font-size: ms(0);
+    transition: all ease 150ms;
+    // @TODO - move font-family to global vars?
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+    @include link() {
+        text-decoration: none;
+        border: rem-calc(2) solid palette(black);
+        background: none;
+        color: palette(black);
+    }
+
+    @include link-hover() {
+        border: 2px solid palette(primary);
+        color: palette(primary);
+    }
+}
+
+// Base btn styling
+.btn {
+    @include btn();
+}
+
+@mixin btn-primary() {
+    @include link() {
+        border: rem-calc(2) solid palette(primary);
+        background: palette(primary);
+        color: white;
+    }
+
+    @include link-hover() {
+        border: rem-calc(2) solid tint(palette(primary), "darken");
+        background: tint(palette(primary), "darken");
+        color: white;
+    }
+}
+
+// Primary btn uses the same styling as the default btn with the projects primary
+// palette colours applied
+.btn--primary {
+    @include btn-primary();
+}
+
+.btn--white {
+    @include link() {
+        border: rem-calc(2) solid palette(white);
+        background: palette(white);
+        color: palette(primary) !important;
+    }
+
+    @include link-hover() {
+        background: rgba(255,255,255, 0);
+        color: palette(white) !important;
+    }
+}
+
+// Naked btn share the same spacing params as btn however dont have a background color,
+// can be used for example to place a link inline next to a button to give the effect
+// of the proper vertical alignment
+.btn--naked {
+    @include link() {
+        border: none;
+        background-image: none;
+        background-color: transparent;
+        color: palette(black);
+    }
+
+    @include link-hover() {
+        border: none;
+        color: palette(primary);
+    }
+}
+
+// Small modifier, halves the padding params of whichever btn it's applied to
+.btn--small {
+    padding: spacing(7 10 6 10);
+    font-size: ms(-1);
+}
+
+// Modifier to change the default (inline) styling to block
+.btn--block {
+    display: block;
+}
+
+// Modifier for disabled buttons
+.is--disabled {
+    opacity: 0.15;
+
+    @include link() {
+        pointer-events: none;
+    }
+
+    @include link-hover() {
+        cursor: not-allowed;
+    }
+}

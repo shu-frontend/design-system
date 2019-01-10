@@ -1,0 +1,38 @@
+title: "Nav Item"
+status: "ready"
+
+context:
+  navitem:
+    message: This is an example nav item
+
+variants:
+  -
+    name: primary
+    context:
+      navitem:
+        message: This is an example primary nav item
+        modifier: nav-item--primary
+  -
+    name: underlined
+    context:
+      navitem:
+        message: This is an example underlined nav item
+        modifier: nav-item--underlined
+  -
+    name: primary-underlined
+    context:
+      navitem:
+        message: This is an example primary + underlined nav item
+        modifier: nav-item--underlined nav-item--primary
+  -
+    name: with-chevron
+    context:
+      navitem:
+        message: This is a nav item with a chevron
+        modifier: nav-item--chevron
+  -
+    name: primary-with-chevron
+    context:
+      navitem:
+        message: This is a primary nav item with a chevron
+        modifier: nav-item--chevron nav-item--primary

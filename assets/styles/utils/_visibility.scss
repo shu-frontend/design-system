@@ -1,0 +1,58 @@
+// ==========================================================================
+// Visibility Utility
+//
+// @todo, doc page for state classes - inc active
+// Utility classes used to show / hide elements
+// ==========================================================================
+
+// wrapping classes required to match specificity of [1]
+.is--hidden {
+    display: none;
+}
+
+@at-root {
+    .js {
+        .is--js-hidden {
+            display: none;
+        }
+    }
+
+    .js-loaded {
+        .is--js-loaded-visible {
+            display: block;
+        }
+        .is--js-loaded-hidden {
+            display: none;
+        }
+    }
+}
+
+
+
+// Responsive visibility classes
+// wrapping classes required to match specificity of [1]
+@each $bp, $config in $breakpoints-map {
+    @include respond-to($bp) {
+        .is--hidden\@#{$bp} {
+            display: none;
+        }
+        .is--visible\@#{$bp} {
+            display: block;
+        }
+    }
+}
+
+// Used to hide elements in print view - docco in `tools/hide-print`
+.is--hidden--print {
+    @include hide-print;
+}
+
+// Hook for Sitecore edit mode
+.js-edit-mode {
+    .is--js-loaded-hidden {
+        display: block;
+    }
+    .is--js-hidden {
+        display: block;
+    }
+}

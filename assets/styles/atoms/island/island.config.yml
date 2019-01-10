@@ -1,0 +1,21 @@
+title: "Islands"
+status: "ready"
+
+context:
+  islands:
+    -
+      class: island--primary
+      title: This is a primary island
+      inverse: true
+    -
+      class: island--grey
+      title: This is a grey island
+      inverse: false
+    -
+      class: island--primary island--bordered
+      title: This is a primary island with a border modifier
+      inverse: true
+    -
+      class: island--grey island--bordered
+      title: This is a grey island with a border modifier
+      inverse: false

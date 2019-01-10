@@ -1,0 +1,11 @@
+<div class="btn-group {{ btnGroup.modifier }}">
+  {% render '@btn--primary' %}
+  {% render '@btn' %}
+  {% if btnGroup.modifier == 'with-caption' %}
+    <div class="btn-group__caption">
+      {% render '@btn--with-caption' %}
+    </div>
+  {% endif %}
+  {% render '@btn' %}
+  {% render '@btn' %}
+</div>

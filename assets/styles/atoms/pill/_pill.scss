@@ -1,0 +1,23 @@
+// ==========================================================================
+// Pill Atom
+// ==========================================================================
+
+.pill {
+    border-radius: rem-calc(30);
+    font-size: ms(-1);
+    padding: spacing(9 15);
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    line-height: 1.44;
+
+    @include link() {
+        background: palette(primary);
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        transition: all ease 150ms;
+    }
+
+    @include link-hover {
+        background: tint(palette(primary), "darken");
+    }
+}

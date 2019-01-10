@@ -1,0 +1,6 @@
+title: "Cite"
+status: "ready"
+
+context:
+    cite:
+        message: This is a default cite message

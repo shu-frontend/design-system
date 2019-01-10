@@ -1,0 +1,19 @@
+title: "Horizontal Rule"
+status: "ready"
+
+variants:
+  -
+    name: dark
+    context:
+      hr:
+        modifier: hr--dark
+  -
+    name: small
+    context:
+      hr:
+        modifier: hr--small
+  -
+    name: dark-small
+    context:
+      hr:
+        modifier: hr--dark hr--small

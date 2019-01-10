@@ -1,0 +1,9 @@
+<figure>
+  <img
+  src="{{ figure.image }}"
+  alt="A nice picture">
+
+  {% if figure.caption %}
+  <figcaption class="u-text-right">{{ figure.caption }}</figcaption>
+  {% endif %}
+</figure>

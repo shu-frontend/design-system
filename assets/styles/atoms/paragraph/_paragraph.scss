@@ -1,0 +1,15 @@
+// ==========================================================================
+// Paragraph Atom
+// ==========================================================================
+
+p {
+    // All paragraphs have margin set in em's
+    margin: 0 0 1em 0;
+    padding: 0;
+    font-size: ms(0);
+    line-height: 1.66;
+}
+
+.fancy {
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}

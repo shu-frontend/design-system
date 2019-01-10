@@ -1,0 +1,9 @@
+title: "Image"
+status: "ready"
+
+variants:
+  -
+    name: full
+    context:
+      img:
+        modifier: img--full

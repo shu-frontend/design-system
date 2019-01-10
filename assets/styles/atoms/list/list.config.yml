@@ -1,0 +1,22 @@
+title: "Lists"
+status: "ready"
+
+context:
+  list:
+    message: This is a standard list item
+
+variants:
+
+  -
+    name: Numbered List
+    context:
+      list:
+        tag: ol
+        message: This is a numbered list item
+  -
+    name: Unstyled List
+    context:
+      list:
+        tag: ul
+        modifier: list--unstyled
+        message: This is an unstyled list item

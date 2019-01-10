@@ -1,0 +1,26 @@
+// ==========================================================================
+// Palette loader tool
+//
+// Used to load colours from the palette design token
+// TLDR; - color: palette(primary);
+// *Important* Remember to load this after including (main.scss) - default usage - @include palette-load($colours-map);
+// ==========================================================================
+
+@import "../tools/map-get-if-exists";
+@import "../tools/map-deep-get-set";
+
+$__palette: () !default  !global;
+
+@mixin palette-load($palette-map) {
+    $__palette: $palette-map !global;
+}
+
+@function palette($color) {
+    $color: quote($color);
+
+    @return map-get-if-exists($__palette, $color);
+}
+
+@function get-palette() {
+    @return $__palette;
+}

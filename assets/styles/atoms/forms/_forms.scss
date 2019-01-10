@@ -1,0 +1,24 @@
+// ==========================================================================
+// Forms Atom
+// ==========================================================================
+
+// @TODO eventually move this to proper form partials
+
+form {
+    display: block;
+
+    .input {
+        border: 2px solid tint(palette(grey), "darken");
+        border-radius: rem-calc(3);
+        padding: spacing(15 50 15 15);
+        color: tint(palette(grey), "darken", 4);
+        min-width: rem-calc(300);
+    }
+
+    .input--search {
+        background-image: url(https://www.shu.ac.uk/assets/images/icons/magnify.png);
+        background-size: 21px 21px;
+        background-repeat: no-repeat;
+        background-position: 95% center;
+    }
+}

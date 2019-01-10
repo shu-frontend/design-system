@@ -1,0 +1,17 @@
+// ==========================================================================
+// Font Ratio Tool
+//
+// Plugin docco - https://github.com/modularscale/modularscale-sass
+// tldr; - font-size: ms(3);
+// tldr; - font-size: ms(3, $thread: desktop);
+//
+// The baseline is 2 scales, one that is a slightly larger ratio at desktop
+// See - http://www.modularscale.com/?15&px&1.200 and toggle the sass tab to get an idea of the scale
+// ==========================================================================
+
+@import '~modularscale-sass/stylesheets/modularscale';
+
+$modularscale: (
+    base: 18px,
+    ratio: 1.15,
+);

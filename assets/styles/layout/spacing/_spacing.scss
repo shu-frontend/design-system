@@ -1,0 +1,46 @@
+// ==========================================================================
+// Spacing Layout Helper
+//
+// Generates an array of utility selectors to attribute spacing based on the spacing design token.
+// See fractal docco page for more info re: available selectors per project
+
+// TLDR; - `p-top-double` / `m-top-double`
+// TLDR; - `p-top-reset--medium` / `m-top-reset--medium`
+// TLDR; - `p-bottom-half` / `m-bottom-half`
+// ==========================================================================
+
+// Create a map of all the 'positions' we want to creat utilities for, for example, `p-top`, `p-left` etc.
+$positions: (
+    'all',
+    'top',
+    'right',
+    'bottom',
+    'left',
+);
+
+// Build the selector suffix to remove 'base' and 'all' from selectors
+@each $prop, $prefix in ('padding': 'p', 'margin':'mg') {
+    @each $position in $positions {
+        $positionSelector: if($position == 'all', '', '-#{$position}');
+        $property: if($position == 'all', '#{$prop}', '#{$prop}-#{$position}');
+
+        @each $spacing, $spacingvalue in $spacing-map {
+            $spacingSelector: if($spacing == 'base', $positionSelector, '#{$positionSelector}--#{$spacing}');
+
+            .#{$prefix}#{$spacingSelector} {
+                #{$property}: spacing($spacing);
+
+                @include breakpoint-loop() {
+                    #{$property}: spacing($spacing) !important;  // sass-lint:disable-line no-important
+                }
+            }
+        }
+
+        /* start reset pad */
+        .#{$prefix}#{$positionSelector}--reset {
+            @include breakpoint-loop() {
+                #{$property}: 0 !important;  // sass-lint:disable-line no-important
+            }
+        }
+    }
+}

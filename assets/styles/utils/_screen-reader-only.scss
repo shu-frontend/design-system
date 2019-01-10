@@ -1,0 +1,9 @@
+// ==========================================================================
+// Screen Reader Only Utility
+//
+// Used to hide an element in print styles - docco in `tools/screen-reader-only`
+// ==========================================================================
+
+.u-screen-reader-only {
+    @include screen-reader-only;
+}

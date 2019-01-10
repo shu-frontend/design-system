@@ -1,0 +1,83 @@
+// ==========================================================================
+// Nav Item Atom
+// ==========================================================================
+
+.nav-item {
+    display: block;
+
+    @include link() {
+        font-size: ms(0);
+        font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        line-height: 1.66;
+        color: palette(black);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    &:hover {
+        color: palette(primary);
+        &:focus {
+            color: palette(black);
+        }
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.nav-item--block {
+    display: block;
+    width: 100%;
+}
+
+// Primary colour modifier
+.nav-item--primary {
+    @include link() {
+        color: palette(primary);
+    }
+
+    &:hover {
+        color: tint(palette(primary), "darken");
+    }
+}
+
+// Primary colour modifier
+.nav-item--white {
+    @include link() {
+        color: palette(white);
+    }
+
+    &:hover {
+        color: tint(palette(white), "darken");
+    }
+}
+
+.nav-item--fancy-active {
+    &.is--active {
+        @include link() {
+            background: palette(white);
+            color: palette(primary) !important;
+            border-radius: rem-calc(3);
+        }
+    }
+}
+
+// By default nav items don't have any text-decoration, this modifier adds it
+.nav-item--underlined {
+    @include link() {
+        text-decoration: underline;
+    }
+}
+
+// Nav item with a chevron on the right
+.nav-item--chevron {
+    // Flex the inners (relies on nav-item text being wrapped in a span or div)
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+
+    .chevron {
+        margin-left: auto;
+        padding-left: 15px;
+    }
+}

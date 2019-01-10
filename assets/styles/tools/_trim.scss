@@ -1,0 +1,19 @@
+// ==========================================================================
+// Trim Tool
+//
+// Used to remove the spacing units from either the first or last child of an element
+// ==========================================================================
+
+// Remove the bottom spacing from the last child (default)
+@mixin trim() {
+    > *:last-child {
+        margin-bottom: 0;
+        // padding-bottom: 0;
+    }
+}
+@mixin trim-pad() {
+    > *:last-child {
+        padding: 0;
+        // padding-bottom: 0;
+    }
+}

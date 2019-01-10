@@ -1,0 +1,24 @@
+// ==========================================================================
+// Figure Atom
+// ==========================================================================
+
+figure {
+    display: block;
+    margin: spacing(25 0);
+
+    img, .video {
+        width: 100%;
+        margin-bottom: spacing(10);
+        border-radius: rem-calc(5);
+    }
+}
+
+figcaption {
+    // Trim the callout so the last child doesn't have spacing bottom
+    font-style: normal;
+    font-size: ms(-3);
+}
+
+.figure--no-space {
+    margin: spacing(0);
+}

@@ -1,0 +1,165 @@
+// ==========================================================================
+// Grid Layout
+// ==========================================================================
+
+$_grid-column-count: 12;
+
+.g {
+    display: flex;
+    box-sizing: border-box;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: - rem-calc($_wrapper-padding / 2);
+    margin-right: - rem-calc($_wrapper-padding / 2);
+}
+
+.g__col {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding-left: rem-calc($_wrapper-padding / 2);
+    padding-right: rem-calc($_wrapper-padding / 2);
+}
+
+// Grid columns
+.g__col-auto {
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 100%;
+}
+
+.__sitecore-g__1of4 {
+    .g__col {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+}
+
+.__sitecore-g__1of3 {
+    .g__col {
+        flex-basis: 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+.__sitecore-g__1of2 {
+    .g__col {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+}
+
+.__sitecore-g__1of1 {
+    .g__col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@for $i from 1 through $_grid-column-count {
+    .g__col-#{$i} {
+        flex-basis: percentage($i/$_grid-column-count);
+        max-width: percentage( $i/$_grid-column-count);
+    }
+
+    .g__col-offset-#{$i} {
+        margin-left: percentage($i/$_grid-column-count);
+    }
+}
+
+@each $bp, $config in $breakpoints-map {
+    @include respond-to($bp) {
+        .g__col-auto\@#{$bp} {
+            flex-grow: 1;
+            flex-basis: 0;
+            max-width: 100%;
+        }
+
+        .__sitecore-g__1of4\@#{$bp} {
+            .g__col {
+                flex-basis: 25%;
+                max-width: 25%;
+            }
+        }
+
+        .__sitecore-g__1of3\@#{$bp} {
+            .g__col {
+                flex-basis: 33.33%;
+                max-width: 33.33%;
+            }
+        }
+
+        .__sitecore-g__1of2\@#{$bp} {
+            .g__col {
+                flex-basis: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @for $i from 1 through $_grid-column-count {
+            .g__col-#{$i}\@#{$bp} {
+                flex-basis: percentage($i/$_grid-column-count);
+                max-width: percentage( $i/$_grid-column-count);
+            }
+
+            .g__col-offset-#{$i}\@#{$bp} {
+                margin-left: percentage($i/$_grid-column-count);
+            }
+        }
+    }
+}
+
+// Gutters
+.g--no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.g--no-gutters > .g__col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@include respond-to(medium) {
+    .g--no-gutters {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .g--no-gutters > .g__col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.g--margin-gutters > .g__col {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+.g__col-order-1 {
+    order: 1;
+
+    @include breakpoint-loop() {
+        order: 1;
+    }
+}
+
+.g__col-order-2 {
+    order: 2;
+
+    @include breakpoint-loop() {
+        order: 2;
+    }
+}
+
+.g__col-order-3 {
+    order: 3;
+
+    @include breakpoint-loop() {
+        order: 3;
+    }
+}

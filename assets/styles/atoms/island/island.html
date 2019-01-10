@@ -1,0 +1,5 @@
+{% for island in islands %}
+    <div class="island {{ island.class }}{% if island.inverse %} u-inverse{% endif %}">
+        <h2>{{ island.title }}</h2>
+    </div>
+{% endfor %}

@@ -1,0 +1,107 @@
+// ==========================================================================
+// Burger Atom
+// ==========================================================================
+
+// Burger parts
+// (---) top    -> &::before
+// [---] middle -> &
+// (---) bottom -> &::after
+
+// We build the actual burger here
+@mixin burger(
+    // Params for the burger
+    $width: 20px,
+    $height: 3px,
+    $gutter: 3px,
+    $color: palette(primary),
+    $transition-duration: 250ms) {
+
+    $burger-height: $height !global;
+    $burger-gutter: $gutter !global;
+
+    position: relative;
+    margin-top: $height + $gutter;
+    margin-bottom: $height + $gutter;
+
+    user-select: none;
+
+
+    &, &::before, &::after {
+        display: block;
+        width: $width;
+        height: $height;
+        background-color: $color;
+        outline: 1px solid transparent;
+    }
+
+    &::before, &::after {
+        position: absolute;
+        content: "";
+    }
+
+    &::before {
+        top: -($height + $gutter);
+    }
+
+    &::after {
+        top: $height + $gutter;
+    }
+}
+
+
+// Here we build the animation / active state for the burger, essentially we transition it into a cross
+@mixin burger-to-cross() {
+    & {
+        background-color: transparent;
+    }
+    &::before {
+        transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+        background-color: white;
+    }
+    &::after {
+        transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+        background-color: white;
+    }
+}
+
+// Burger outer wrap, add background colours here if you want
+.burger {
+    display: flex;
+    align-items: center;
+    padding: spacing(30 25);
+    background: transparent;
+
+    &:hover {
+        cursor: pointer;
+    }
+    &:focus {
+        outline: none;
+        background-color: palette('grey');
+    }
+}
+
+// The text that sits to the right of the burger icon, often 'menu' or 'open'
+.burger__text {
+    font-size: ms(-1);
+    font-weight: bold;
+    color: palette(primary);
+    padding-left: spacing(5);
+}
+
+// Init the actual burger icon
+.burger__icon {
+    @include burger;
+}
+
+// Init the burger icon active state
+
+.burger.is--active {
+    background: palette(secondary);
+    &:focus {
+        outline: none;
+        background-color: palette('primary');
+    }
+}
+.burger.is--active .burger__icon {
+    @include burger-to-cross;
+}

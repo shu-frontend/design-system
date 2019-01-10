@@ -1,0 +1,7 @@
+title: "Figure"
+status: "ready"
+
+context:
+    figure:
+        image: https://picsum.photos/600/350
+        caption: Sheffields independent movement

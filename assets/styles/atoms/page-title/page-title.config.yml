@@ -1,0 +1,13 @@
+title: "Page Title"
+status: "ready"
+
+context:
+  pageTitle:
+    heading: Clearing Page Title
+
+variants:
+  -
+    name: small
+    context:
+      pageTitle:
+        modifier: page-title--small

@@ -1,0 +1,27 @@
+// ==========================================================================
+// Tint Tool
+//
+// @TODO; - masthead, docco, add to palette doc page
+
+// Used as an alternative to sass lighten, darken, allows us to lighten or darken a colour
+// the same amount throughout the project without manually setting the amount each time
+
+// TLDR; - background: tint(paletet(primary), 'lighten');
+// TLDR; - background: tint(paletet(primary), 'darken');
+// ==========================================================================
+
+// The % amount to tint when using this tool
+$_tint-amount: 10%;
+
+@function tint($color, $shade, $multiplier: 1) {
+    $_tint-amount: $_tint-amount * $multiplier;
+    @if $shade == "lighten" {
+        @return lighten($color, $_tint-amount);
+    } @else {
+        @if $shade == "darken" {
+            @return darken($color, $_tint-amount);
+        } @else {
+            @error '$shade value must be one of "lighten" or "darken"';
+        }
+    }
+}

@@ -1,0 +1,40 @@
+global:
+  category: 'Font Sizes'
+  type: 'number'
+props:
+  xxxlarge:
+    value: 47
+    comment: 'xxxxxxxxlarge'
+  xxlarge:
+    value: 35
+    comment: 'xxxxxxxlarge'
+  xlarge:
+    value: 33
+    comment: 'xxxxxxlarge'
+  xlarge:
+    value: 27
+    comment: 'xxxxxlarge'
+  xlarge:
+    value: 26
+    comment: 'xxxxlarge'
+  large:
+    value: 24
+    comment: 'xxxlarge'
+  large:
+    value: 23
+    comment: 'xxlarge'
+  medium:
+    value: 20
+    comment: 'xlarge'
+  regular:
+    value: 19
+    comment: 'large'
+  regular:
+    value: 18
+    comment: 'medium'
+  regular:
+    value: 16
+    comment: 'regular'
+  small:
+    value: 14
+    comment: small

@@ -1,0 +1,77 @@
+// ==========================================================================
+// Links Atom
+// ==========================================================================
+a,
+.link {
+
+    // Default link uses the primary palette
+    @include link() {
+        text-decoration: underline;
+        text-decoration-skip: ink;
+        color: palette(primary);
+    }
+
+    @include link-hover() {
+        color: tint(palette(primary), "darken");
+    }
+
+    &:focus {
+        outline: 1px dotted palette(black);
+    }
+
+    &:active {
+        outline: none;
+    }
+}
+
+// Remove all styling for a 'plain' modifier
+.link--plain {
+    @include link() {
+        text-decoration: none;
+        text-decoration-skip: none;
+        color: currentColor;
+    }
+}
+
+.link--bold {
+    @include link() {
+        font-weight: 500;
+    }
+}
+
+.link--black {
+    @include link() {
+        color: palette(black);
+    }
+
+    @include link-hover() {
+        color: paletet(black);
+    }
+}
+
+.link--white {
+    @include link() {
+        color: white;
+    }
+
+    @include link-hover() {
+        color: white;
+    }
+}
+
+.link--underlined {
+    @include link() {
+        text-decoration: underline !important;
+        text-decoration-skip: ink !important;
+    }
+}
+
+// Block display modifier
+.link--block {
+    display: block;
+}
+
+.link--fancy {
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+

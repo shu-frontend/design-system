@@ -1,0 +1,31 @@
+title: "Flash Message"
+status: ready
+
+context:
+  flash:
+    message: Flash Message
+variants:
+  -
+    name: success
+    context:
+      flash:
+        modifier: flash-message--success
+        message: Success
+  -
+    name: warning
+    context:
+      flash:
+        modifier: flash-message--warning
+        message: Warning
+  -
+    name: error
+    context:
+      flash:
+        modifier: flash-message--error
+        message: Error
+  -
+    name: bottom
+    context:
+      flash:
+        modifier: flash-message--bottom
+        message: Cookie Message

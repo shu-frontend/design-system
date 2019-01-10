@@ -1,0 +1,18 @@
+// ==========================================================================
+// Callout Atom
+// ==========================================================================
+
+.callout {
+    // Trim the callout so the last child doesn't have spacing bottom
+    @include trim();
+    margin: spacing(base 0);
+    padding: spacing(base);
+    background: palette(grey);
+
+    @include respond-to(medium) {
+        padding: spacing(double);
+    }
+}
+.callout:first-child {
+    margin-top: 0;
+}

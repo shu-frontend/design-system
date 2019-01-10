@@ -1,0 +1,40 @@
+// ==========================================================================
+// Button Group Atom
+// ==========================================================================
+
+// Base btn group styling
+.btn-group {
+    position: relative;
+    margin-right: spacing(-10);
+    margin-bottom: spacing(-10);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: top;
+    flex-wrap: wrap;
+
+    // Style buttons within the group accordingly
+    > .btn {
+        align-self: flex-start;
+        margin-right: spacing(5);
+        margin-bottom: spacing(10);
+        height: auto;
+    }
+
+    // Wrap for a captioned button, flexes the caption below
+    > .btn-group__caption {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin-right: spacing(5);
+        margin-bottom: spacing(10);
+        height: auto;
+    }
+
+    // @TODO - potential js based solution for a better version of this?
+    .micro {
+        max-width: rem-calc(200);
+        margin-top: spacing(3);
+        word-break: break;
+    }
+}

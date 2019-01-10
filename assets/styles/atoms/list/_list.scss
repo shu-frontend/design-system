@@ -1,0 +1,124 @@
+// ==========================================================================
+// Lists Atom
+// ==========================================================================
+
+// The base list styles
+%list-base {
+    margin: 0 0 1em 0.5em;
+    // list-style: none;
+    line-height: 1.44;
+    font-size: ms(0);
+    padding-left: 0;
+
+    @include respond-to(medium) {
+        margin: 0 0 1em 1em;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+        font-size: ms(0);
+    }
+}
+
+@mixin list--bullet {
+    // Extend the base list styles set above
+    @extend %list-base;
+    list-style-position: outside;
+
+    li {
+        padding-left: rem-calc(15);
+        position: relative;
+
+        // Create and position the bullet from the before psuedo element
+        // &:before {
+        //     position: absolute;
+        //     top: rem-calc(10);
+        //     left: 0;
+        //     display: block;
+        //     margin-bottom: rem-calc(4);
+        //     margin-right: rem-calc(8);
+        //     content: " ";
+        //     width: 4px;
+        //     height: 4px;
+        //     border-radius: 100%;
+        //     background-color: palette(black);
+        // }
+    }
+}
+
+@mixin list--numbered {
+    @extend %list-base;
+    counter-reset: list;
+
+    li {
+        padding-left: rem-calc(15);
+        position: relative;
+
+        // Create and position the counter from the before psuedo element
+        // &:before {
+        //     position: absolute;
+        //     top: rem-calc(4);
+        //     left: 0;
+        //     counter-increment: list;
+        //     content: counters(list, ".") ".";
+        //     color: palette(black);
+        //     margin-right: rem-calc(12);
+        //     font-size: ms(-1);
+        // }
+    }
+
+    ol {
+        // Reset the counter for nested ol's
+        counter-reset: list;
+    }
+}
+
+ul {
+    @include list--bullet;
+}
+
+.list--unstyled {
+    li {
+        padding-left: 0;
+        &:before,
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.list--css-col {
+    margin: 0;
+    columns: 1;
+
+    @include respond-to(small) {
+        columns: 2;
+        column-gap: rem-calc(50);
+    }
+
+    @include respond-to(medium) {
+        columns: 3;
+    }
+
+    li {
+        margin: 0;
+        padding-left: 0;
+    }
+}
+
+.list--css-col--single {
+    columns: 1;
+
+    @include respond-to(small) {
+        columns: 1;
+    }
+
+    @include respond-to(medium) {
+        columns: 1;
+    }
+}
+
+// Declare the numbered list styling on both the modifier class and globally to all ol's
+ol {
+    @include list--numbered;
+}

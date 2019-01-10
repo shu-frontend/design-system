@@ -1,0 +1,20 @@
+title: "Meta"
+status: "ready"
+
+context:
+  meta:
+    message: Meta Text
+
+variants:
+  -
+    name: highlight
+    context:
+      meta:
+        message: Meta Text (Highlight)
+        modifier: meta--highlight
+  -
+    name: tight
+    context:
+      meta:
+        message: Meta Text (Tight)
+        modifier: meta--tight

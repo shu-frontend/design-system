@@ -1,0 +1,68 @@
+// ==========================================================================
+// Headings Atom
+//
+//  @TASKIST
+// ==========================================================================
+
+// Class selectors for overwrites, for example you may want a <h3> with h1 styling
+// <h3 class="h1"></h3>
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    color: palette(black);
+    font-weight: 700;
+    line-height: 1.4;
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+h1, .h1 {
+    font-size: ms(4);
+
+    @include respond-to(medium) {
+        font-size: ms(6);
+    }
+}
+
+h2, .h2 {
+    font-size: ms(3);
+
+    @include respond-to(medium) {
+        font-size: ms(4);
+    }
+}
+
+h3, .h3 {
+    font-size: ms(2);
+
+    @include respond-to(medium) {
+        // font-size: ms(2, $thread: desktop);
+    }
+}
+
+h4, .h4 {
+    font-size: ms(1);
+
+    @include respond-to(medium) {
+        // font-size: ms(1, $thread: desktop);
+    }
+}
+
+h5, .h5,
+h6, .h6 {
+    font-size: ms(0);
+
+    @include respond-to(medium) {
+        // font-size: ms(0, $thread: desktop);
+    }
+}
+
+.hero--title {
+    font-size: ms(10);
+}
+
+

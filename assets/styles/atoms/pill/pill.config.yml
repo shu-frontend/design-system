@@ -1,0 +1,6 @@
+title: "Pill"
+status: "ready"
+
+context:
+  pill:
+    message: Pill Example

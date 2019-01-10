@@ -1,0 +1,40 @@
+title: "Chevron"
+status: "ready"
+
+variants:
+  -
+    name: up
+    context:
+      chevron:
+        modifier: chevron--up
+  -
+    name: right
+    context:
+      chevron:
+        modifier: chevron--right
+  -
+    name: left
+    context:
+      chevron:
+        modifier: chevron--left
+  -
+    name: primary
+    context:
+      chevron:
+        modifier: chevron--primary
+  -
+    name: primary-up
+    context:
+      chevron:
+        modifier: chevron--up chevron--primary
+  -
+    name: primary-right
+    context:
+      chevron:
+        modifier: chevron--right chevron--primary
+  -
+    name: primary-left
+    context:
+      chevron:
+        modifier: chevron--left chevron--primary
+

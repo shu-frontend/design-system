@@ -1,0 +1,11 @@
+title: "Blockquote"
+status: "ready"
+
+context:
+  blockquote:
+    message: >-
+      <p>This is a blockquote message lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem massa, facilisis a nibh quis, iaculis feugiat felis. Duis tellus libero, faucibus quis tincidunt id, dictum vel nisl. Donec lorem sem, consequat vitae maximus non, placerat eu quam. Nullam posuere sed leo quis dapibus. Pellentesque gravida, lectus a ullamcorper congue, ante risus posuere dui, vel porttitor tellus tortor at risus. Vestibulum pulvinar, quam ac consectetur tempus, sem ligula pharetra eros, ac iaculis quam elit sit amet ex. Nam vel dui lobortis, euismod lectus id, bibendum orci. Pellentesque ac erat eget ex lacinia commodo sed a dolor.</p>
+
+      <p>Mauris sed nisl tellus. Quisque luctus nibh risus, et pellentesque libero condimentum iaculis. In vulputate erat et turpis suscipit, vitae ullamcorper orci aliquet. Proin porta nec mauris vitae dictum. Nullam pellentesque pulvinar dolor nec tincidunt. Donec ornare dui mauris, vitae imperdiet justo consectetur a. Sed lobortis bibendum pulvinar. Quisque sed lorem et ante pellentesque dignissim a vel dolor.</p>
+
+

@@ -1,0 +1,9 @@
+title: "Callout"
+status: "ready"
+
+variants:
+  -
+    name: small
+    context:
+      close:
+        modifier: close--small

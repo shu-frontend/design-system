@@ -1,0 +1,32 @@
+// ==========================================================================
+// Sticky Utility
+//
+// Used to fix something to the top of the screen
+//
+// @TODO
+//  - 1. Add modifiers for sticky positions (top, bottom, left, right);
+//  - 2. Add some kind of allowance for multiple instances of stickiness
+//  - 3. Should use some kind of z-index helper
+//  - 4. Docco this in Fractal?
+// ==========================================================================
+
+.is--sticky {
+    position: sticky;
+    top: -1px;
+    // left: 0;
+    // right: 0;
+    z-index: 100;
+}
+
+.is--fixed {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: top 0.4s ease 0.1s;
+}
+
+.is--off-canvas-top {
+    top: -100%;
+}

@@ -1,0 +1,9 @@
+<button class="burger {{ burger.modifier }}"
+    {% for attr, value in burger.attrs %}
+        {{ attr }}="{{ value }}"
+    {% endfor %}>
+    <div class="burger__icon"></div>
+    {% if burger.message %}
+        <div class="burger__text">{{ burger.message }}</div>
+    {% endif %}
+</button>

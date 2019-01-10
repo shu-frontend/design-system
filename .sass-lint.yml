@@ -1,0 +1,50 @@
+#########################
+## Sass Lint Config
+#########################
+# Linter Options
+options:
+  # Don't merge default rules
+  merge-default-rules: false
+  # Raise an error if more than 50 warnings are generated
+  max-warnings: 200
+# File Options
+files:
+  include: 'assets/components/**/*.s+(a|c)ss'
+  ignore:
+    - 'node_modules/**/*.*'
+    - 'assets/components/design/*.s+(a|c)ss'
+    - 'assets/components/legacy/**/*.*'
+# Rule Configuration
+rules:
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 2
+  mixins-before-declarations:
+    - 2
+    -
+      exclude:
+        - breakpoint
+        - mq
+        - respond-to
+        - link
+        - link-hover
+        - breakpoint-loop
+        - trim
+        - inverse
+  indentation:
+    - 4
+    -
+      size: 4
+  no-debug: 1
+  no-ids: 1
+  no-important: 1
+  hex-notation:
+    - 2
+    -
+      style: uppercase
+  # variable-for-property:
+  #   - 1
+  #   -
+  #     properties:
+  #       - margin
+        # - content

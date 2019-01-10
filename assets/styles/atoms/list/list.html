@@ -1,0 +1,12 @@
+{% if list.tag %}
+  {% set tag = list.tag %}
+{% else %}
+  {% set tag = 'ul' %}
+{% endif %}
+<{{ tag }} class="{{ list.modifier }}">
+    <li>{{ list.message }}</li>
+    <li>{{ list.message }}</li>
+    <li>{{ list.message }}</li>
+    <li>{{ list.message }}</li>
+</{{ tag }}>
+

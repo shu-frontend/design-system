@@ -1,0 +1,31 @@
+// ==========================================================================
+// Text Align Utility
+//
+// Used to apply text based alignment to an element, can also be used responsively
+// ==========================================================================
+
+// sass-lint:disable no-important
+.u-text-center {
+    text-align: center !important;
+
+    // Loop through each breakpoint in in the breakpoint design token and generate bp specific classes
+    @include breakpoint-loop() {
+        text-align: center !important;
+    }
+}
+
+.u-text-right {
+    text-align: right !important;
+
+    @include breakpoint-loop() {
+        text-align: right !important;
+    }
+}
+
+.u-text-left {
+    text-align: left !important;
+
+    @include breakpoint-loop() {
+        text-align: left !important;
+    }
+}

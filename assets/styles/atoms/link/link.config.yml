@@ -1,0 +1,39 @@
+title: "Links"
+status: "ready"
+
+context:
+  link:
+    message: This is a standard link item
+
+variants:
+  -
+    name: plain
+    context:
+      link:
+        modifier: link--plain
+        message: This is a plain link item
+  -
+    name: primary
+    context:
+      link:
+        modifier: link--primary
+        message: This is a primary link item
+  -
+    name: bold
+    context:
+      link:
+        modifier: link--bold
+        message: This is a bold link item
+
+  -
+    name: bold-primary
+    context:
+      link:
+        modifier: link--bold link--primary
+        message: This is a primary + bold link item
+  -
+    name: block
+    context:
+      link:
+        modifier: link--block
+        message: This is a display block link item

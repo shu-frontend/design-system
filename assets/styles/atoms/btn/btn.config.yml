@@ -1,0 +1,86 @@
+title: "Buttons"
+status: "ready"
+
+context:
+  btn:
+    message: Default Button
+
+variants:
+  -
+    name: primary
+    context:
+      btn:
+        modifier: btn--primary
+        message: Button Primary
+  -
+    name: white
+    context:
+      btn:
+        modifier: btn--white
+        message: Button White
+  -
+    name: naked
+    context:
+      btn:
+        modifier: btn--naked
+        message: Naked Button
+  -
+    name: small
+    context:
+      btn:
+        modifier: btn--small
+        message: Small Button
+  -
+    name: small-primary
+    context:
+      btn:
+        modifier: btn--small btn--primary
+        message: Small Primary Button
+  -
+    name: small-naked
+    context:
+      btn:
+        modifier: btn--small btn--naked
+        message: Small Naked Button
+  -
+    name: block
+    context:
+      btn:
+        modifier: btn--block
+        message: Block Display Button
+  -
+    name: block-primary
+    context:
+      btn:
+        modifier: btn--block btn--primary
+        message: Block Display Primary Button
+  -
+    name: block-naked
+    context:
+      btn:
+        modifier: btn--block btn--naked
+        message: Block Display Naked Button
+  -
+    name: disabled
+    context:
+      btn:
+        modifier: is--disabled
+        message: Disabled Button
+  -
+    name: primary-disabled
+    context:
+      btn:
+        modifier: is--disabled btn--primary
+        message: Disabled Primary Button
+  -
+    name: with-caption
+    context:
+      btn:
+        caption: true
+  -
+    name: primary-with-caption
+    context:
+      btn:
+        caption: true
+        modifier: btn--primary
+

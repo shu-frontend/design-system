@@ -1,0 +1,26 @@
+// ==========================================================================
+// Micro Text Atom
+// ==========================================================================
+
+// Micro Text
+.page-title {
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    color: palette(black);
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: ms(6);
+    font-family: "stolzl", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+    @include respond-to(medium) {
+        font-size: ms(10);
+    }
+}
+
+.page-title--small {
+    font-size: ms(6);
+
+    @include respond-to(medium) {
+        font-size: ms(8);
+    }
+}

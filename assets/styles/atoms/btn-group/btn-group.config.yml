@@ -1,0 +1,15 @@
+title: "Button group"
+status: "ready"
+
+context:
+  name: default
+  btnGroup:
+    caption: Nothing
+
+variants:
+  -
+    name: with-caption
+    context:
+      btnGroup:
+        modifier: with-caption
+        caption: Button Primary

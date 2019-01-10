@@ -1,0 +1,13 @@
+// ==========================================================================
+// Text Color Utility
+//
+// Used to apply a text color to an element
+// TLDR; - `u-text-color-primary`
+// ==========================================================================
+
+// Loop over each breakpoint in the breakpoints design token and output a class for each color
+@each $color, $value in $colours-map {
+    .u-text-color-#{$color} {
+        color: $value;
+    }
+}

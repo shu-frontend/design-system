@@ -1,0 +1,51 @@
+<!-- NoPad preview context  -->
+{%- set noPad = false -%}
+
+{% if _target.context.preview %}
+    {% if 'noPad' in _target.context.preview %}
+        {% set noPad = true %}
+    {% endif %}
+{% endif %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Preview Layout</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Fonts -->
+        <!-- Roboto Slab: 300(light), 400(regular), 500(bold) -->
+        <link rel="stylesheet" type="text/css" media="screen" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700|Roboto:400,500,700">
+
+        <!-- Typekit -->
+        <!-- Stozl: 500(medium), 700(bold -->
+        <link rel="stylesheet" href="https://use.typekit.net/ccp7pce.css">
+
+        <!-- FontAwesome -->
+        <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+
+        <link media="all" rel="stylesheet" href="{{ '/styles/shu-design-system-base.css' | path }}">
+
+        <!-- Inline styling for Preview context logic at the top of this file -->
+        <style>
+            body {
+                {% if not noPad %}
+                    margin: 25px;
+                {% endif %}
+            }
+        </style>
+    </head>
+
+    <!-- contenteditable so we can easily mess with content within Fractal -->
+    <body class="js" contenteditable="contenteditable">
+
+        <div class="shu-design-system-v1-0">
+            {{ yield }}
+        </div>
+
+        <!-- <script src="{{ '/js/shu-design-system.js' | path }}"></script> -->
+
+    </body>
+</html>
