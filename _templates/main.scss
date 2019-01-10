@@ -1,27 +1,31 @@
 // // Global Tools
 // Design System Base Tools
-@import "~shu-design-system-base/assets/styles/tools/common";
+@import "~shu-frontend-design-system/assets/styles/tools/common";
 
 // Palette Tool Load
+@import "~shu-frontend-design-system/design/colours.map";
 @include palette-load($colours-map);
+
 // Breakpoint Tool Load
+@import "~shu-frontend-design-system/design/breakpoints.map";
 @include breakpoint-load($breakpoints-map);
+
 // Spacing Tool Load
+@import "~shu-frontend-design-system/design/spacing.map";
 @include spacing-load($spacing-map);
 
 // Custom tools here
-
-@import "~shu-design-system-base/assets/styles/normalize";
+@import "~shu-frontend-design-system/assets/styles/normalize";
 
 // // Layout
 // Design System Base Layout
-@import "~shu-design-system-base/assets/styles/layout/common";
+@import "~shu-frontend-design-system/assets/styles/layout/common";
 
 // Custom Layout here
 
 // // Atoms
 // Design System Base Atoms
-@import "~shu-design-system-base/atoms/common";
+@import "~shu-frontend-design-system/assets/styles/atoms/common";
 
 // Custom atoms here
 
@@ -40,6 +44,6 @@
 // // Utilities
 // Always load utils last as we want thm at the bottom of the stack for priority
 // Design System Base Utilities
-@import "~shu-design-system-base/utilities/common";
+@import "~shu-frontend-design-system/assets/styles/utils/common";
 
 // Custom Utilities here
