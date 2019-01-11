@@ -21,3 +21,18 @@
         background: tint(palette(primary), "darken");
     }
 }
+
+.pill--small {
+    padding: spacing(6 8);
+}
+
+.pill--grey {
+    @include link() {
+        background: palette(grey);
+        color: palette(black);
+    }
+
+    @include link-hover {
+        background: tint(palette(grey), "darken");
+    }
+}
