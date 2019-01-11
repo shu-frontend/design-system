@@ -1,6 +1,6 @@
 {
   "name": "shu-frontend-design-system",
-  "version": "1.0.1",
+  "version": "1.0.1-rc.1",
   "description": "Base styles for SHU Design System",
   "main": "index.js",
   "repository": {
