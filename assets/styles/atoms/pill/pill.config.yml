@@ -4,3 +4,23 @@ status: "ready"
 context:
   pill:
     message: Pill Example
+
+variants:
+  -
+    name: small
+    context:
+      pill:
+        modifier: pill--small
+        message: Pill Small
+  -
+    name: grey
+    context:
+      pill:
+        modifier: pill--grey
+        message: Pill Grey
+  -
+    name: meta
+    context:
+      pill:
+        modifier: pill--meta pill--small
+        message: Pill Meta

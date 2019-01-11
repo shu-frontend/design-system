@@ -23,7 +23,17 @@
 }
 
 .pill--small {
-    padding: spacing(6 8);
+    padding: spacing(4 9);
+    border-radius: rem-calc(5);
+}
+
+.pill--meta {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: ms(-3);
+    font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    letter-spacing: rem-calc(3);
+    line-height: 1.44;
 }
 
 .pill--grey {
